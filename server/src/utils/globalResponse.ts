@@ -1,4 +1,3 @@
-// src/utils/globalResponse.ts
 import { Response } from 'express';
 
 interface ResponseData<T> {

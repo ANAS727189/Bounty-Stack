@@ -1,8 +1,7 @@
-// src/config/db.ts
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 
-dotenv.config(); // Ensure env vars are loaded
+dotenv.config(); 
 
 const connectDB = async (): Promise<void> => {
   const mongoUri = process.env.MONGO_URI;
@@ -17,7 +16,6 @@ const connectDB = async (): Promise<void> => {
     console.log('✅ MongoDB Connected');
   } catch (err: any) {
     console.error('❌ MongoDB Connection Error:', err.message);
-    // Exit process with failure
     process.exit(1);
   }
   mongoose.connection.on('disconnected', () => {
