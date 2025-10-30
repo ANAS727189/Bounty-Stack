@@ -24,12 +24,10 @@ const QuestionSchema: Schema = new Schema(
     descriptionLink: {
       type: String,
       trim: true,
-      // Optional: Add validation for URL format if desired
     },
     askerWallet: {
       type: String,
       required: [true, 'Asker wallet address is required'],
-      // Add index for faster lookups based on asker
       index: true,
     },
     askerRef: {
@@ -38,14 +36,12 @@ const QuestionSchema: Schema = new Schema(
     },
     bountyPda: {
       type: String,
-      // Unique because one question should only have one bounty PDA
       unique: true,
-      // Sparse index allows multiple documents without this field (before funding)
       sparse: true,
       index: true,
     },
     bountyAmountLamports: {
-        type: Number, // Store as lamports (u64 can exceed JS Number limit, but Mongoose handles large numbers)
+        type: Number, 
         min: 0,
     },
     status: {
@@ -53,7 +49,7 @@ const QuestionSchema: Schema = new Schema(
       enum: ['pending_funding', 'open', 'awarded', 'cancelled'],
       default: 'pending_funding',
       required: true,
-      index: true, // Index for filtering questions by status
+      index: true,
     },
   },
   {

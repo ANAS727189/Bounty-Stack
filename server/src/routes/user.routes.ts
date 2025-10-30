@@ -1,8 +1,17 @@
 import express from 'express';
-import { loginUser, getUserProfile } from '../controllers/user.controllers';
+import { 
+  loginUser, 
+  getUserProfile,
+  restoreReputation
+} from '../controllers/user.controllers';
+import { protect } from '../middlewares/auth.middlewares';
 
-const router = express.Router();
+const userRouter = express.Router();
 
-router.post('/login', loginUser);
-router.get('/profile/:walletAddress', getUserProfile); 
-export default router;
+userRouter.post('/login', loginUser);
+userRouter.get('/profile/:walletAddress', getUserProfile);
+
+
+userRouter.patch('/:walletAddress/restore-reputation', protect, restoreReputation);
+
+export default userRouter;

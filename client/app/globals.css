@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import "tailwindcss";
+
+
+@layer base {
+  :root {
+    /* Colors */
+    --so-orange: #F48225;
+    --so-black: #232629;
+    --so-dark-gray: #3C4146;
+    --so-gray: #6A737C;
+    --so-light-gray: #9FA6AD;
+    --so-blue: #0A95FF;
+    --so-green: #5FA634;
+    --so-red: #D1383D;
+    --so-yellow: #fff4d1;
+
+
+    --pixel-border: 3px;
+    --pixel-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+    --pixel-shadow-sm: 2px 2px 0px 0px rgba(0, 0, 0, 1);
+    --pixel-shadow-lg: 6px 6px 0px 0px rgba(0, 0, 0, 1);
+    --pixel-shadow-xl: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+  }
+
+  * {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+  }
+
+  body {
+    background-color: #FAFAFA;
+    color: var(--so-black);
+    font-family: system-ui, sans-serif;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #FAFAFA;
+    border: 2px solid #000;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--so-orange);
+    border: 2px solid #000;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--so-dark-gray);
+  }
+}
+
+
+@layer utilities {
+  .pixel-text {
+    font-family: 'Press Start 2P', 'Courier New', monospace;
+    image-rendering: pixelated;
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .pixel-shadow {
+    box-shadow: var(--pixel-shadow);
+  }
+  
+  .pixel-shadow-sm {
+    box-shadow: 2px 2px 0px 0px rgba(0,0,0,1);
+  }
+  
+  .pixel-shadow-lg {
+    box-shadow: 6px 6px 0px 0px rgba(0,0,0,1);
+  }
+  
+  .pixel-border {
+    border: var(--pixel-border) solid #000;
+  }
+
+  .border-3 {
+    border-width: 3px;
+  }
+
+  .bg-so-orange { background-color: var(--so-orange); }
+  .bg-so-black { background-color: var(--so-black); }
+  .bg-so-dark-gray { background-color: var(--so-dark-gray); }
+  .bg-so-gray { background-color: var(--so-gray); }
+  .bg-so-light-gray { background-color: var(--so-light-gray); }
+  .bg-so-blue { background-color: var(--so-blue); }
+  .bg-so-green { background-color: var(--so-green); }
+  .bg-so-red { background-color: var(--so-red); }
+  .bg-so-yellow { background-color: var(--so-yellow); }
+
+  .text-so-orange { color: var(--so-orange); }
+  .text-so-black { color: var(--so-black); }
+  .text-so-dark-gray { color: var(--so-dark-gray); }
+  .text-so-gray { color: var(--so-gray); }
+  .text-so-light-gray { color: var(--so-light-gray); }
+  .text-so-blue { color: var(--so-blue); }
+  .text-so-green { color: var(--so-green); }
+  .text-so-red { color: var(--so-red); }
+  .text-so-yellow { color: var(--so-yellow); }
+}
+
+@layer components {
+  .pixel-button {
+    border: var(--pixel-border) solid #000;
+    box-shadow: var(--pixel-shadow);
+    font-family: 'Press Start 2P', 'Courier New', monospace;
+    image-rendering: pixelated;
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: grayscale;
+
+    @apply font-bold uppercase;
+    
+    transition: all 0.1s ease;
+  }
+  
+  .pixel-button:hover:not(:disabled) {
+    box-shadow: 2px 2px 0px 0px rgba(0,0,0,1);
+    transform: translate(2px, 2px);
+  }
+  
+  .pixel-button:active:not(:disabled) {
+    box-shadow: none;
+    transform: translate(4px, 4px);
+  }
+}

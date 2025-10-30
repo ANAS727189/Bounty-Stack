@@ -3,14 +3,18 @@ import dotenv from 'dotenv';
 import mainRouter from './routes/index';
 import { GlobalError } from './utils/globalError';
 import { errorHandler } from './middlewares/errorhandler.middlewares';
+import cors from 'cors';
 
 dotenv.config(); 
 
 const app: Express = express();
 
-// Middlewares
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); 
+app.use(cors({
+  origin: '*',
+}))
 
 app.get('/health', (req: Request, res: Response) => {
   res.status(200).json({ status: 'UP', timestamp: new Date().toISOString() });
