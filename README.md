@@ -31,7 +31,6 @@
   <a href="#architecture">Architecture</a> •
   <a href="#getting-started">Getting Started</a> •
   <a href="#documentation">Documentation</a> •
-  <a href="#contributing">Contributing</a>
 </p>
 
 ---
