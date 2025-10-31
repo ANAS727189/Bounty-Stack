@@ -1,9 +1,12 @@
+
+
+<div align="center">
+
 # BountyStack
 
-<p align="center">
-  <strong>A decentralized question and answer platform built on Solana that enables direct monetary incentives for expert knowledge through on-chain bounties and trustless escrow.</strong>
-</p>
+**A decentralized question and answer platform built on Solana that enables direct monetary incentives for expert knowledge through on-chain bounties and trustless escrow.**
 
+</div>
 <p align="center">
   <a href="https://github.com/ANAS727189/Bounty-Stack">
     <img src="https://img.shields.io/github/stars/ANAS727189/Bounty-Stack?style=social" alt="GitHub stars" />
