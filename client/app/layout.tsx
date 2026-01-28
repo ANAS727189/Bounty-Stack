@@ -37,7 +37,6 @@ export default function RootLayout({
           <div className="pt-20">
             {children}
           </div>
-          <Footer />
         </SolanaProvider>
       </body>
     </html>

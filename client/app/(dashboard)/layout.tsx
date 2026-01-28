@@ -1,3 +1,4 @@
+import Footer from "@/components/Layout/Footer";
 import Sidebar from "@/components/Layout/Sidebar";
 
 export default function DashboardLayout({
@@ -11,7 +12,10 @@ export default function DashboardLayout({
         <Sidebar />
       </div>
       <main className="ml-64 flex-1 p-8 min-h-screen">
-        {children}
+        <div className="grow p-8">
+          {children}
+        </div>
+        <Footer />
       </main>
     </div>
   );

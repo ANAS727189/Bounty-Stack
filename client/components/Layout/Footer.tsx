@@ -18,11 +18,11 @@ const Footer = () => {
               The Q&A platform where developers earn SOL for solving problems.
             </p>
             <div className="flex gap-3 mt-6">
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" 
+              <a href="https://x.com/Anas_is_me" target="_blank" rel="noopener noreferrer" 
                 className="w-10 h-10 bg-so-yellow border-2 border-black hover:bg-so-orange hover:text-white transition-colors flex items-center justify-center pixel-shadow-sm">
                 <span className="text-so-black">𝕏</span>
               </a>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+              <a href="https://github.com/ANAS727189" target="_blank" rel="noopener noreferrer"
                 className="w-10 h-10 bg-so-yellow border-2 border-black hover:bg-so-orange hover:text-white transition-colors flex items-center justify-center pixel-shadow-sm">
                 <span className="text-so-black">⚡</span>
               </a>

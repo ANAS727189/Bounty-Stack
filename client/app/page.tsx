@@ -6,6 +6,7 @@ import HeroSection from '@/components/Landing/HeroSection';
 import { ReputationSection } from '@/components/Landing/ReputationSystem';
 import { SocialProofSection } from '@/components/Landing/Testimonial';
 import { TrustSection } from '@/components/Landing/TrustSystem';
+import Footer from '@/components/Layout/Footer';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <TrustSection />
       <ReputationSection />
       <SocialProofSection />
+      <Footer />
     </>
   );
 }
